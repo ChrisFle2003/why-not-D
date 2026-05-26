@@ -1,0 +1,12 @@
+https://wiki.ubuntuusers.de/SSH/
+
+sudo systemctl status ssh
+
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+sudo ufw allow ssh
+
+sudo nano /etc/ssh/sshd_config
+
+sudo service ssh restart
