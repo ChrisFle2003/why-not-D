@@ -1,0 +1,21 @@
+sudo apt update
+sudo apt install vsftpd
+
+sudo systemctl start vsftpd
+sudo systemctl enable vsftpd
+
+sudo adduser ftpuser
+
+sudo nano /etc/vsftpd.conf
+
+Look for and uncomment the following lines (remove the # if present):
+textlocal_enable=YES
+write_enable=YES
+
+To restrict the user strictly to their home directory for security purposes, ensure this line is uncommented:
+textchroot_local_user=YES
+
+sudo systemctl restart vsftpd
+
+sudo ufw allow 20,21/tcp
+sudo ufw status
