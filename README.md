@@ -1,3 +1,3 @@
 # why-not-:D
 
-Just for fun some start up CMD Sachen. ;D
+Just for fun some start up LINUX Sachen. ;D
