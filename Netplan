@@ -1,0 +1,21 @@
+https://wiki.ubuntuusers.de/Netplan/
+
+1. Netzwerk-Konfiguration (statisch)
+
+sudo rm /etc/netplan/50-cloud-init.yaml 
+sudo touch /etc/netplan/01-ens160.yaml
+
+
+network:
+ version: 2
+ renderer: networkd
+ ethernets:
+   ens160:
+     dhcp4: no / yes
+     dhcp6: no / yes
+     addresses: ...
+     gateway4: ...
+     nameservers:
+       addresses: ...
+
+ sudo netplan apply
